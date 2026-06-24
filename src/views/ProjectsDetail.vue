@@ -3,164 +3,169 @@ import { RouterLink, useRoute } from "vue-router";
 import { projectData } from "@/data/ProjectData.js";
 
 const route = useRoute();
-const project = projectData.find((item) => {
-  return item.id === Number(route.params.id);
-});
+const project = projectData.find((item) => item.id === Number(route.params.id));
 </script>
 
 <template>
-  <div class="container">
-    <RouterLink :to="{ path: '/projects', query: { slide: route.query.slide } }" class="back-link">回到作品頁</RouterLink>
-    <div class="card-wrapper">
-      <div class="detail-card">
-        <div class="card-left">
-          <img :src="project.img" :alt="project.title" />
+  <section class="page">
+    <RouterLink to="/projects" class="back-link">← 回到作品頁</RouterLink>
+
+    <div v-if="project" class="detail-card">
+      <h1 class="detail-title">{{ project.title }}</h1>
+
+      <div class="detail-tags">
+        <span class="detail-tag" v-for="(tag, i) in project.tags" :key="i">{{ tag }}</span>
+      </div>
+
+      <div class="detail-img">
+        <img :src="project.img" :alt="`${project.title} 預覽圖`" />
+      </div>
+
+      <section class="detail-section">
+        <h2 class="section-title">專案說明</h2>
+        <p class="section-text">{{ project.detail }}</p>
+      </section>
+
+      <section class="process-box">
+        <h2 class="section-title">開發歷程</h2>
+        <div class="process-item">
+          <p class="process-label">遭遇的困難</p>
+          <p class="section-text">{{ project.difficulty }}</p>
         </div>
-        <div class="card-right">
-          <div class="project-title">{{ project.title }}</div>
-          <div class="skills-wrapper">
-            <span v-for="(item, index) in project.skills" :key="index" class="skill-tag">{{ item }}</span>
-          </div>
-          <div class="detail-wrapper">
-            <div class="project-detail">{{ project.detail }}</div>
-            <div class="project-detail">遭遇的困難 :<br>{{ project.difficulty }}</div>
-            <div class="project-detail">解決方法 :<br>{{ project.solution }}</div>
-          </div>
-          <div class="outter-link">
-            <a href="" class="link">
-              <FontAwesomeIcon :icon="['fas', 'link']" />
-              GitHub 連結
-            </a>
-            <a href="" class="link">
-              <FontAwesomeIcon :icon="['fas', 'link']" />
-              Demo 連結
-            </a>
-          </div>
+        <div class="process-item">
+          <p class="process-label">解決方法</p>
+          <p class="section-text">{{ project.solution }}</p>
         </div>
+      </section>
+
+      <div class="detail-actions" v-if="project.demo">
+        <a class="demo-btn" :href="project.demo" target="_blank" rel="noopener">前往 Demo →</a>
       </div>
     </div>
-  </div>
+
+    <p v-else class="not-found">找不到這個作品。</p>
+  </section>
 </template>
 
 <style scoped>
-.container {
-  flex-grow: 1;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  background-color: #F0EDE7;
-}
-
-.card-wrapper {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .back-link {
-  width: fit-content;
-  color: #8B7355;
-  border: 1px solid #8B7355;
-  font-size: 1.25rem;
-  padding: 8px 16px;
-  text-decoration: none;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  margin-top: 22px;
   display: inline-block;
-  transition: all 0.2s;
+  font-size: 1rem;
+  color: var(--color-text-soft);
+  padding: 6px 14px;
+  border: 1px solid var(--color-tag-border);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
-
 .back-link:hover {
-  color: #F8F6F2;
-  border-color: #F8F6F2;
-  background-color: #8B7355;
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  background: var(--color-surface);
 }
 
 .detail-card {
-  display: flex;
-  flex-direction: row;
-  min-height: 500px;
-  width: 1150px;
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0px 0px 5px 0px rgb(87, 87, 87);
+  margin-top: 1.25rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 1.75rem;
 }
 
-.card-left {
-  width: 600px;
-  aspect-ratio: 4/3;
-  overflow: hidden;
+.detail-title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text);
 }
 
-.card-left img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
-
-.card-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1.5rem;
-}
-
-.project-title {
-  font-size: 2.5rem;
-  font-weight: 500;
-  color: #2C2C2C;
-}
-
-.skills-wrapper {
+.detail-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 6px;
+  margin-top: 0.75rem;
+}
+.detail-tag {
+  font-size: 1rem;
+  padding: 2px 12px;
+  border: 1px solid var(--color-tag-border);
+  border-radius: 999px;
+  color: var(--color-tag-text);
 }
 
-.skill-tag {
-  display: inline-block;
-  color: #8B7355;
-  border: 0.5px solid #8B7355;
-  border-radius: 4px;
-  padding: 2px 8px;
-  font-size: 1.2rem;
-}
-
-.detail-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.project-detail {
-  color: #7A7A7A;
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-
-.outter-link {
-  display: flex;
-  justify-content: end;
-  gap: 0 5px;
-}
-
-.link {
-  border: 0.5px solid #8B7355;
+.detail-img {
+  margin-top: 1.25rem;
+  aspect-ratio: 16 / 9;
   border-radius: 10px;
-  color: #8B7355;
-  padding: 4px 8px;
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: all 0.2s;
+  overflow: hidden;
+  background: var(--color-border);
+}
+.detail-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  object-position: left center;
 }
 
-.link:hover {
-  color: #F8F6F2;
-  border-color: #F8F6F2;
-  background-color: #8B7355;
+.detail-section {
+  margin-top: 1.5rem;
+}
+
+.section-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.section-text {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.process-box {
+  margin-top: 1.5rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+.process-item {
+  margin-bottom: 1rem;
+}
+.process-item:last-child {
+  margin-bottom: 0;
+}
+.process-label {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-soft);
+}
+
+.detail-actions {
+  margin-top: 1.5rem;
+}
+.demo-btn {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 10px 22px;
+  border-radius: 8px;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.demo-btn:hover {
+  background: var(--color-accent-hover);
+}
+
+.not-found {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: var(--color-text-muted);
 }
 </style>
