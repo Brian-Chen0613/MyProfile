@@ -6,6 +6,9 @@ import ProjectsDetail from "@/views/ProjectsDetail.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior() {
+    return { top: 0 };
+  },
   routes: [
     { path: "/", 
       component: MyProfile 

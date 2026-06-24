@@ -1,20 +1,46 @@
-*{
-    box-sizing: border-box;
+:root {
+  /* ===== 大地色系（角色對應色碼）===== */
+  --color-bg: #F4EEE2;           /* 頁面背景：米砂棕 */
+  --color-surface: #FBF7EF;      /* 卡片表面：米白 */
+  --color-border: #E2D7C3;       /* 邊框 / 分隔線：淺駝 */
+  --color-text: #3D332A;         /* 主文字：深棕黑 */
+  --color-text-muted: #8A7866;   /* 次要文字：灰棕 */
+  --color-text-soft: #5C4A3A;    /* 標語 / 次按鈕文字：中棕 */
+  --color-accent: #B5673E;       /* 強調色：磚橘 */
+  --color-accent-hover: #9E5733; /* 強調色 hover：深磚橘 */
+  --color-on-accent: #FBF7EF;    /* 強調色底上的文字：米白 */
+  --color-tag-border: #C9B89C;   /* 標籤外框：淺駝 */
+  --color-tag-text: #8A6A4A;     /* 標籤文字：棕 */
+  --color-nav-bg: #3D332A;       /* 導覽列底：深棕黑 */
+  --color-nav-text: #F4EEE2;     /* 導覽列文字：米砂棕 */
 }
 
-body{
-    margin: 0;
-    width: 100%;
-    height: 100dvh;
+* {
+  box-sizing: border-box;
 }
 
-p{
-    margin: unset;
+body {
+  margin: 0;
+  width: 100%;
+  height: 100dvh;
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
-#app{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+p {
+  margin: unset;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 全站頁面外層，統一最大寬度、置中與左右內距 */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
 }
