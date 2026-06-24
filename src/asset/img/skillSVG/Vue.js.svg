@@ -1,0 +1,15 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <title>Vue.js 圖示</title>
+
+  <!-- 白色圓形底 -->
+  <circle cx="100" cy="100" r="100" fill="white"/>
+
+  <!-- 綠色外層大 V -->
+  <polygon points="40,38 68,38 100,95 132,38 160,38 100,128" fill="#42b883"/>
+
+  <!-- 深藍色內層小 V（疊上去產生內 V 效果） -->
+  <polygon points="68,38 84,38 100,68 116,38 132,38 100,95" fill="#35495e"/>
+
+  <!-- Vue.js 文字 -->
+  <text x="100" y="158" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#35495e">Vue.js</text>
+</svg>

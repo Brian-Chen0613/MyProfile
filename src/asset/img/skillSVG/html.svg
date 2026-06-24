@@ -1,0 +1,6 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="40" cy="40" r="40" fill="#E34F26"/>
+  <text x="40" y="22" font-family="Arial Black,sans-serif" font-size="11" font-weight="900" text-anchor="middle" fill="white">HTML</text>
+  <polygon points="40,26 24,30 26,60 40,64 54,60 56,30" fill="white"/>
+  <text x="40" y="57" font-family="Arial Black,sans-serif" font-size="20" font-weight="900" text-anchor="middle" fill="#E34F26">5</text>
+</svg>

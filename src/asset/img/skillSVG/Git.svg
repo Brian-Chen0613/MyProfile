@@ -1,0 +1,25 @@
+<svg width="200" height="210" viewBox="0 0 210 210" xmlns="http://www.w3.org/2000/svg" style="">
+  <title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Git 圖示</title>
+
+  <!-- 白色圓形底 -->
+  <circle cx="100" cy="100" r="100" fill="white" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- 橘紅色菱形（加大） -->
+  <rect x="38" y="38" width="90" height="90" rx="12" ry="12" fill="#F05032" transform="rotate(45 83 83)" style="fill:rgb(240, 80, 50);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- 白色 branch 線條 -->
+  <!-- 下圓點到上圓點（主幹垂直線） -->
+  <line x1="80" y1="92" x2="80" y2="52" stroke="white" stroke-width="5.5" stroke-linecap="round" style="fill:rgb(0, 0, 0);stroke:rgb(255, 255, 255);color:rgb(255, 255, 255);stroke-width:5.5px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <!-- 主幹中段到右分支圓點（斜線） -->
+  <line x1="80" y1="68" x2="104" y2="82" stroke="white" stroke-width="5.5" stroke-linecap="round" style="fill:rgb(0, 0, 0);stroke:rgb(255, 255, 255);color:rgb(255, 255, 255);stroke-width:5.5px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- 圓點：底部（起點） -->
+  <circle cx="80" cy="95" r="8.5" fill="white" stroke="#F05032" stroke-width="4" style="fill:rgb(255, 255, 255);stroke:rgb(240, 80, 50);color:rgb(255, 255, 255);stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <!-- 圓點：頂部 -->
+  <circle cx="80" cy="49" r="8.5" fill="white" stroke="#F05032" stroke-width="4" style="fill:rgb(255, 255, 255);stroke:rgb(240, 80, 50);color:rgb(255, 255, 255);stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <!-- 圓點：右側分支 -->
+  <circle cx="107" cy="83" r="8.5" fill="white" stroke="#F05032" stroke-width="4" style="fill:rgb(255, 255, 255);stroke:rgb(240, 80, 50);color:rgb(255, 255, 255);stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- git 文字（往下移） -->
+  <text x="120" y="162" font-family="Arial Black,sans-serif" font-size="30" font-weight="900" text-anchor="middle" fill="#1a1a1a" style="fill:rgb(26, 26, 26);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Arial Black&quot;, sans-serif;font-size:30px;font-weight:900;text-anchor:middle;dominant-baseline:auto">git</text>
+</svg>
