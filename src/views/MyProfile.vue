@@ -1,6 +1,6 @@
 <script setup>
 import { useRouter } from "vue-router";
-import avatar from '@/asset/img/avatar/大頭照.jpg'
+import avatar from "@/asset/img/avatar/大頭照.jpg";
 import { projectData } from "@/data/ProjectData";
 import ProjectCards from "@/components/ProjectCards.vue";
 
@@ -24,7 +24,7 @@ function goToDetail(id) {
         <span class="hero-badge">Frontend Developer</span>
         <h1 class="hero-name">陳允</h1>
         <p class="hero-title">前端開發學習者</p>
-        <p class="hero-tagline">從餐飲業轉身踏入前端開發，<br />以細心與合作帶進每一行程式碼。</p>
+        <p class="hero-tagline">把每個細節做對，<br />是我對使用者的尊重。</p>
         <div class="hero-actions">
           <router-link class="btn btn-primary" to="/projects">瀏覽作品</router-link>
           <router-link class="btn btn-secondary" to="/skills">查看技能</router-link>

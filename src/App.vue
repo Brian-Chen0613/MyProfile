@@ -10,7 +10,9 @@ const route = useRoute();
       <RouterLink to="/" class="brand">個人作品集</RouterLink>
       <div class="nav-links">
         <RouterLink to="/" :class="{ 'nav-active': route.path === '/' }">首頁</RouterLink>
-        <RouterLink to="/skills" :class="{ 'nav-active': route.path === '/skills' }">技能</RouterLink>
+        <RouterLink to="/skills" :class="{ 'nav-active': route.path === '/skills' }"
+          >技能</RouterLink
+        >
         <RouterLink
           to="/projects"
           :class="{ 'nav-active': route.path.startsWith('/projects') }"
@@ -46,7 +48,7 @@ nav {
 }
 
 .content {
-  padding-top: 57px;
+  padding-top: 73px;
 }
 
 .nav-inner {
@@ -96,7 +98,7 @@ nav {
 }
 
 .nav-links .nav-github {
-  font-size: 1.5rem;   /* ← 這裡調整圖示大小 */
+  font-size: 1.5rem; /* ← 這裡調整圖示大小 */
 }
 
 @media (max-width: 768px) {
