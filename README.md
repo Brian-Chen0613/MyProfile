@@ -1,38 +1,54 @@
-# MyProfile
+# 個人作品集 Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+收錄並展示個人前端作品，供求職面試參考使用。
 
-## Recommended IDE Setup
+🔗 **Demo：** [https://brian-chen0613.github.io/MyProfile/](https://brian-chen0613.github.io/MyProfile/)
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Recommended Browser Setup
+## 專案簡介
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+以 Vue 3 打造的個人作品集網站，包含個人介紹、技能展示、作品列表與作品詳情頁，採響應式設計支援桌機與手機瀏覽。
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 頁面結構
 
-## Project Setup
+| 路由 | 說明 |
+|------|------|
+| `/` | 首頁：個人介紹 Hero + 精選作品 |
+| `/skills` | 技能：前端技術能力展示 |
+| `/projects` | 作品：所有作品卡片列表 |
+| `/projects/:id` | 作品詳情：專案說明、挑戰與解決方式 |
 
-```sh
+---
+
+## 技術棧
+
+| 類別 | 技術 |
+|------|------|
+| 框架 | Vue 3（Composition API / `<script setup>`） |
+| 路由 | Vue Router 5 |
+| 狀態管理 | Pinia |
+| 建置工具 | Vite 8 |
+| 圖示 | Font Awesome（Free Solid + Brands） |
+| 輪播 | Swiper |
+| 樣式 | 原生 CSS（Scoped + CSS 變數色彩系統） |
+| 部署 | GitHub Pages（GitHub Actions 自動部署） |
+
+---
+
+## 本地啟動
+
+```bash
+# 安裝依賴
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# 啟動開發伺服器
 npm run dev
-```
 
-### Compile and Minify for Production
-
-```sh
+# 打包
 npm run build
 ```
+
+Node.js 版本需求：`^20.19.0 || >=22.12.0`
